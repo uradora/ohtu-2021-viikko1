@@ -41,15 +41,15 @@ class TestVarasto(unittest.TestCase):
 
     def test_negatiivinen_alkutilavuus_ei_mahdollinen(self):
         self.varasto = Varasto(-5)
-        self.assertAlmostEqual(self.varasto.tilavuus, 0)
+        self.assertAlmostEqual(self.varasto.tilavuus, 2)
 
     def test_negatiivinen_alkusaldo_ei_mahdollinen(self):
         self.varasto = Varasto(10,-5)
-        self.assertAlmostEqual(self.varasto.saldo, 0)
+        self.assertAlmostEqual(self.varasto.saldo, 2)
 
     def test_alkutilavuus_voi_olla_nolla(self):
         self.varasto = Varasto(0)
-        self.assertAlmostEqual(self.varasto.tilavuus, 0)
+        self.assertAlmostEqual(self.varasto.tilavuus, 2)
 
     def test_ylimaarainen_saldo_menee_hukkaan(self):
         self.varasto = Varasto(5,10)
@@ -57,7 +57,7 @@ class TestVarasto(unittest.TestCase):
 
     def test_negatiivinen_lisays_ei_tee_mitaan(self):
         self.varasto.lisaa_varastoon(-5)
-        self.assertAlmostEqual(self.varasto.saldo, 0)
+        self.assertAlmostEqual(self.varasto.saldo, 2)
 
     def test_liikaa_lisatessa_ylimaara_hukkaan(self):
         self.varasto.lisaa_varastoon(15)
