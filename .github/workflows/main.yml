@@ -39,5 +39,3 @@ jobs:
         run: |
           poetry shell
           pylint src
-        
->>>>>>> 484d2edf90d76a9481512c6e4f67dc643c78d505
