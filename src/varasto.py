@@ -7,7 +7,7 @@ class Varasto:
         if alku_saldo > 0.0 and alku_saldo > tilavuus:
             self.saldo = tilavuus
         else:
-            alku_saldo = 0.0
+            self.saldo = 0.0
 
     # huom: ominaisuus voidaan myös laskea. Ei tarvita erillistä kenttää viela_tilaa tms.
     def paljonko_mahtuu(self):
